@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MediGuide educational cardiovascular screening and heart-diet guidance">
+  <title>MediGuide | Heart screening & diet guidance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#home" aria-label="MediGuide home">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span><strong>MediGuide</strong><small>heart health guidance</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#screening">Screening</a>
+        <a href="#diet">Diet guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Educational health companion</p>
+          <h1>Clear next steps for your heart health.</h1>
+          <p class="hero-copy">Answer a short symptom questionnaire or explore everyday food choices with transparent, safety-first guidance.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#screening">Start symptom screening <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#diet">Explore heart diet guide</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <span class="hero-icon" aria-hidden="true">♥</span>
+          <h2>Safety comes first</h2>
+          <p>If you have ongoing chest discomfort, severe trouble breathing, fainting, or stroke warning signs, call your local emergency number now.</p>
+          <strong>India: 112 / 108</strong>
+        </div>
+      </div>
+    </section>
+
+    <div id="global-status" class="shell status" role="status" aria-live="polite"></div>
+
+    <section id="screening" class="shell section">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 · Symptom screening</p><h2>Tell us what you are experiencing</h2></div>
+        <span id="screening-progress" class="progress-label">Loading questions…</span>
+      </div>
+      <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      <div class="notice notice-info"><strong>Educational screening only.</strong> This tool does not diagnose conditions or replace a healthcare professional. Emergency answers are handled before any supplementary model estimate.</div>
+      <form id="screening-form" class="questionnaire" novalidate>
+        <div id="questions-container" class="question-grid">
+          <div class="loading-card">Loading questionnaire…</div>
+        </div>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit" id="screening-submit">Submit screening</button>
+          <button class="button button-quiet" type="button" id="screening-reset">Clear answers</button>
+        </div>
+      </form>
+      <div id="screening-result" class="result-area" hidden></div>
+    </section>
+
+    <section id="diet" class="section section-tint">
+      <div class="shell">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 · Heart diet guide</p><h2>Make food choices with context</h2></div>
+          <span class="section-kicker">No medication or fluid instructions</span>
+        </div>
+        <div class="diet-layout">
+          <aside class="card profile-card">
+            <h3>Your dietary profile</h3>
+            <p class="muted">These settings personalize general educational guidance.</p>
+            <div class="check-list">
+              <label><input type="checkbox" id="profile-heart"> Existing heart condition</label>
+              <label><input type="checkbox" id="profile-hypertension"> Hypertension</label>
+              <label><input type="checkbox" id="profile-diabetes"> Diabetes</label>
+            </div>
+            <label class="field-label" for="diet-preference">Diet preference</label>
+            <select id="diet-preference">
+              <option value="any">Any</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="non_vegetarian">Non-vegetarian</option>
+            </select>
+            <label class="field-label" for="sodium-limit">Daily sodium limit (mg, optional)</label>
+            <input id="sodium-limit" type="number" min="1" placeholder="2000">
+          </aside>
+
+          <div class="diet-content">
+            <div class="card query-card">
+              <div><h3>Ask about a food</h3><p class="muted">Try “samosa” and “1 piece”.</p></div>
+              <form id="food-query-form" class="query-form">
+                <label class="sr-only" for="food-query">Food</label>
+                <input id="food-query" type="search" placeholder="Food name, e.g. oats" required>
+                <label class="sr-only" for="food-portion">Portion</label>
+                <input id="food-portion" type="text" placeholder="Portion, e.g. 1 piece" required>
+                <button class="button button-primary" type="submit">Check food</button>
+              </form>
+              <div id="food-result" class="output-area" hidden></div>
+            </div>
+            <div class="card plan-card">
+              <div class="plan-header"><div><h3>Daily meal plan</h3><p class="muted">A sample plan from the MediGuide seed foods.</p></div><button id="plan-button" class="button button-secondary" type="button">Generate meal plan</button></div>
+              <div id="plan-result" class="output-area" hidden></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p><strong>MediGuide</strong> is an educational screening and nutrition tool.</p>
+      <p>For urgent symptoms, contact emergency services. Always consult a healthcare professional for personal advice.</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
