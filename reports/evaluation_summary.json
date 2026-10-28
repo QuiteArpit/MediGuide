@@ -1,0 +1,489 @@
+{
+  "evaluation": "MediGuide Phase 8",
+  "workbook": "docs/phase1_test_scenarios.xlsx",
+  "triage": {
+    "scenario_count": 56,
+    "care_level_defined_count": 44,
+    "care_level_agreement": 0.75,
+    "emergency_expected": 13,
+    "emergency_detected": 13,
+    "emergency_recall": 1.0,
+    "non_emergency_defined": 31,
+    "false_alarms": 0,
+    "specificity": 1.0,
+    "confusion_matrix": {
+      "emergency": {
+        "emergency": 13,
+        "urgent_consultation": 0,
+        "prompt_consultation": 0,
+        "routine_checkup": 0,
+        "self_monitor": 0
+      },
+      "urgent_consultation": {
+        "emergency": 0,
+        "urgent_consultation": 0,
+        "prompt_consultation": 0,
+        "routine_checkup": 0,
+        "self_monitor": 0
+      },
+      "prompt_consultation": {
+        "emergency": 0,
+        "urgent_consultation": 1,
+        "prompt_consultation": 1,
+        "routine_checkup": 8,
+        "self_monitor": 0
+      },
+      "routine_checkup": {
+        "emergency": 0,
+        "urgent_consultation": 0,
+        "prompt_consultation": 0,
+        "routine_checkup": 5,
+        "self_monitor": 1
+      },
+      "self_monitor": {
+        "emergency": 0,
+        "urgent_consultation": 0,
+        "prompt_consultation": 0,
+        "routine_checkup": 1,
+        "self_monitor": 14
+      }
+    },
+    "scenario_results": [
+      {
+        "scenario_id": "E01",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E02",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E03",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E04",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E05",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E06",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E07",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E08",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E09",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "E10",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "P01",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "prompt_consultation",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "P02",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P03",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P04",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P05",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P06",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P07",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "urgent_consultation",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P08",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "P09",
+        "expected_care_level": "routine_checkup",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "P10",
+        "expected_care_level": "routine_checkup",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N01",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N02",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N03",
+        "expected_care_level": "routine_checkup",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N04",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N05",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "N06",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N07",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N08",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "N09",
+        "expected_care_level": "prompt_consultation",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "N10",
+        "expected_care_level": "routine_checkup",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "L01",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L02",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L03",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L04",
+        "expected_care_level": "routine_checkup",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L05",
+        "expected_care_level": "routine_checkup",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L06",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L07",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L08",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L09",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "L10",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": false
+      },
+      {
+        "scenario_id": "D01",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D02",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D03",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D04",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D05",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D06",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D07",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D08",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D09",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "D10",
+        "expected_care_level": "n/a_(diet_query)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "X01",
+        "expected_care_level": "no_care_level_(out_of_scope)",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "X02",
+        "expected_care_level": "no_care_level_(out_of_scope)",
+        "predicted_care_level": "routine_checkup",
+        "emergency_detected": false,
+        "agreement": null
+      },
+      {
+        "scenario_id": "X03",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "X04",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      },
+      {
+        "scenario_id": "X05",
+        "expected_care_level": "self_monitor",
+        "predicted_care_level": "self_monitor",
+        "emergency_detected": false,
+        "agreement": true
+      },
+      {
+        "scenario_id": "X06",
+        "expected_care_level": "emergency",
+        "predicted_care_level": "emergency",
+        "emergency_detected": true,
+        "agreement": true
+      }
+    ]
+  },
+  "diet": {
+    "plans_evaluated": 3,
+    "plans_under_2000mg_sodium": 3,
+    "sodium_compliance_rate": 1.0,
+    "plans_meet_all_targets": 3,
+    "plan_totals": [
+      {
+        "calories_kcal": 1365.8,
+        "sodium_mg": 1700.7,
+        "saturated_fat_g": 8.790000000000001,
+        "total_fat_g": 37.51,
+        "dietary_fiber_g": 40.32,
+        "carbohydrates_g": 228.1,
+        "protein_g": 47.769999999999996,
+        "potassium_mg": 3001.1
+      },
+      {
+        "calories_kcal": 1358.3,
+        "sodium_mg": 1571.7,
+        "saturated_fat_g": 9.99,
+        "total_fat_g": 39.91,
+        "dietary_fiber_g": 32.82,
+        "carbohydrates_g": 204.1,
+        "protein_g": 63.67,
+        "potassium_mg": 2971.1
+      },
+      {
+        "calories_kcal": 1365.8,
+        "sodium_mg": 1700.7,
+        "saturated_fat_g": 8.790000000000001,
+        "total_fat_g": 37.51,
+        "dietary_fiber_g": 40.32,
+        "carbohydrates_g": 228.1,
+        "protein_g": 47.769999999999996,
+        "potassium_mg": 3001.1
+      }
+    ]
+  },
+  "ml_comparison": {
+    "available": false,
+    "finding": "No persisted ML artifact was available; rule-only evaluation was run.",
+    "safety_constraint": "Rule-based red flags remain authoritative and cannot be overridden by ML."
+  }
+}
