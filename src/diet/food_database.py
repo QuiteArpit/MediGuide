@@ -58,7 +58,7 @@ def seed_foods() -> tuple[FoodItem, ...]:
         ("lauki", "Lauki curry", "vegetables", 150, (70, 180, 0.3, 2, 2, 10, 2, 260), {"vegetarian", "heart_healthy"}),
         ("samosa", "Samosa", "snacks", 60, (260, 480, 4, 16, 2, 30, 5, 170), {"vegetarian", "fried", "high_sodium"}),
         ("pakora", "Pakora", "snacks", 100, (280, 520, 3, 18, 3, 28, 6, 180), {"vegetarian", "fried", "high_sodium"}),
-        ("biscuit", "Salted biscuit", "packaged_snacks", 30, (480, 650, 6, 20, 2, 68, 7, 120), {"vegetarian", "processed", "high_sodium"}),
+        ("biscuit", "Salted biscuit", "packaged_snacks", 30, (480, 650, 6, 20, 2, 68, 7, 120), {"vegetarian", "processed", "high_sodium"}, ("salty biscuits", "salted biscuits")),
         ("namkeen", "Namkeen mixture", "packaged_snacks", 30, (520, 900, 7, 30, 4, 52, 12, 350), {"vegetarian", "processed", "high_sodium", "fried"}),
         ("chips", "Potato chips", "packaged_snacks", 30, (540, 500, 7, 34, 4, 50, 6, 450), {"vegetarian", "processed", "high_sodium", "fried"}),
         ("roasted_makhana", "Roasted makhana", "snacks", 30, (350, 180, 0.5, 1, 7, 78, 9, 500), {"vegetarian", "high_fiber", "heart_healthy"}),
