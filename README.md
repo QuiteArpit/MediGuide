@@ -48,12 +48,83 @@ See `docs/02_repo_structure.md` for what belongs in each folder and why.
 
 ## Getting started
 
+Clone the repository and create a virtual environment:
+
 ```bash
 git clone <your-repo-url> && cd MediGuide
-python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate                 # Windows: .venv\Scripts\activate
 ```
+
+Install the backend and test dependencies:
+
+```bash
+python -m pip requirements.txt
+```
+
 Download the datasets by following `data/raw/DATA_SOURCES.md`.
+
+## Run the application
+
+Start the FastAPI backend from the repository root:
+
+```bash
+python -m uvicorn src.api.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+The backend is available at:
+
+- Health check: <http://127.0.0.1:8000/health>
+- Swagger API documentation: <http://127.0.0.1:8000/docs>
+- ReDoc API documentation: <http://127.0.0.1:8000/redoc>
+
+In a second terminal, serve the dependency-free frontend:
+
+```bash
+cd src/app
+python -m http.server 5500
+```
+
+Open <http://127.0.0.1:5500> in a browser. Do not open `index.html` directly,
+because browser file-origin rules can prevent it from calling the backend.
+
+The frontend loads the questionnaire from `/questions`, submits answers to
+`/screening`, checks foods through `/food-query`, and generates meal plans
+through `/diet-plan`. To use a backend on another port, append its URL as an
+encoded `api` query parameter, for example:
+
+```text
+http://127.0.0.1:5500/?api=http%3A%2F%2F127.0.0.1%3A9000
+```
+
+You can also call the health endpoint from a terminal:
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+## Run tests
+
+Run the complete automated test suite from the repository root:
+
+```bash
+python -m pytest -q
+```
+
+Run only the API tests:
+
+```bash
+python -m pytest tests/test_api.py -q
+```
+
+Run one specific test:
+
+```bash
+python -m pytest tests/test_api.py::test_health_endpoint -q
+```
+
+The API tests use FastAPI's in-process test client, so the backend does not
+need to be running separately when running pytest.
 
 ## Language rules for all outputs
 
